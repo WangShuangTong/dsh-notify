@@ -1,5 +1,7 @@
 # dsh-notify
 
+[![CI](https://github.com/WangShuangTong/dsh-notify/actions/workflows/ci.yml/badge.svg)](https://github.com/WangShuangTong/dsh-notify/actions/workflows/ci.yml)
+
 Desktop notifications for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`).
 When DSH needs your approval or answer, finishes a turn, or fails while you are
 working in another application (IDEA, WeChat, a meeting…), a topmost card appears

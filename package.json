@@ -1,0 +1,60 @@
+{
+  "name": "dsh-notify",
+  "version": "0.1.0",
+  "description": "Desktop notifications when DSH needs you or finishes a turn",
+  "license": "MIT",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/popup.ps1",
+    "cordis.patch.yml",
+    "README.md",
+    "docs/notification.png"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "notifications",
+    "windows",
+    "desktop"
+  ],
+  "author": "dsh-notify contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WangShuangTong/dsh-notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WangShuangTong/dsh-notify/issues"
+  },
+  "homepage": "https://github.com/WangShuangTong/dsh-notify#readme",
+  "packageManager": "pnpm@11.28.5",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test \"test/*.test.ts\"",
+    "check": "pnpm run typecheck && pnpm run test && pnpm run build",
+    "prepack": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

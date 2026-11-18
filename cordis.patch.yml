@@ -1,0 +1,16 @@
+# Bundle layer contributed by dsh-notify. The installed profile may override
+# the same row by id; a patch replaces this whole config object.
+- insert:
+    - id: dsh-notify
+      name: dsh-notify
+      config:
+        notifyOnAsk: true
+        notifyOnDone: true
+        notifyOnError: true
+        sound: true
+        onlyWhenUnfocused: true
+        announce: true
+        askAutoCloseMs: 60000
+        doneAutoCloseMs: 15000
+        transport: auto
+        debug: false

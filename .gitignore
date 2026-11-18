@@ -1,0 +1,8 @@
+node_modules/
+.test-home/
+.tgz-home/
+.backup/
+lib/*.map
+*.log
+*.tgz
+.env
